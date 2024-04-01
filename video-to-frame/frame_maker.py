@@ -38,6 +38,6 @@ def video_to_frames(video_path, frames_dir):
 
 
 # Usage
-video_path = 'C:\\Users\\kathr\\Desktop\\Frames\\mp4\\bgframe.mp4'
-frames_dir = 'C:\\Users\\kathr\\Desktop\\Frames\\bg_frames'
+video_path = 'C:\\Users\\Name\\Desktop\\Frames\\mp4\\bgframe.mp4'
+frames_dir = 'C:\\Users\\Name\\Desktop\\Frames\\bg_frames'
 video_to_frames(video_path, frames_dir)
