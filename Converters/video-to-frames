@@ -37,7 +37,7 @@ def video_to_frames(video_path, frames_dir):
     cap.release()
 
 
-# Usage
-video_path = 'C:\\Users\\Name\\Desktop\\Frames\\mp4\\bgframe.mp4'
-frames_dir = 'C:\\Users\\Name\\Desktop\\Frames\\bg_frames'
+# Usage; remember to fill in pathways
+video_path = [PATH HERE]
+frames_dir = [PATH HERE]
 video_to_frames(video_path, frames_dir)
