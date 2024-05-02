@@ -1,25 +1,24 @@
 # Volleyball CV
 
 ## Problem Description
-Current Volleyball Analytics software solutions are unavailable for the broad audience because of their cost and access restricted only to teams that can afford existing software. Ball tracking is an important component for designing tools that help analyze players’ performance on the court.
+Currently, Volleyball Analytics software solutions are very expensive, and therefore only accessible to teams that can afford the existing software. Ball tracking (or more generally, object tracking) is the foundational basis of any effective sports analytics software. All future additions to the model and the software functionality are based on the fundamental ability to accurately track the location of the ball. Therefore, the primary goal of our project is focused on optimizing the ball tracking functionality.
 
-The task we will be performing is called localization in Computer Vision, meaning identifying the location of an object in the video. The data we are using comes from Temple Division I Volleyball game videos and was obtained with the permission of the team's coach. Our team will train the Supervised Machine Learning Model YOLOv8 on manually annotated video frames to achieve high-accuracy ball tracking. To deal with occlusion occuring during the play we plan on utilizing the Sequential Analysis approach. After achieving the successful ball-tracking, we will move to tracking players positioned the closest to the ball (See: Image Below). This is a significant milestone to offer other developers to build off our foundation and allow identification of elements performed by players such as Set, Pass, or Attack, relevant to the development of volleyball analytics software.
+With our Computer Vision models, we will perform localization in order to identify the location of the ball in gameplay videos. The data we are using comes from Temple Division I Volleyball game videos and was obtained with the permission of the team's coach. Our team will train the Supervised Machine Learning Model YOLOv8 on manually annotated video frames to achieve high-accuracy ball tracking. We will address the occlusion problem by utilizing the Sequential Analysis approach.
 
 ## Motivation
 Volleyball Video Analytics Software is an increasingly popular tool used by teams in the United States. It allows players and coaches to watch past games and practices to gain insights about potential tactics allowing them to improve their technical maneuvers. Users of this software can take advantage of the features that make the analysis process more efficient and accurate. For example, coaches can apply filters to analyze missed serves throughout the game.
 
-As the commercially-available solution used by most volleyball teams currently costs $10,000 per year, and is available only to the paying teams, not all the volleyball players have access to this tool. We intend to create a Volleyball Video Analytics model that would serve as a free resource for players and teams who may not have the resources to take advantage of the for-pay product.
+
+We were inspired by these facts to work towards making our own Volleyball Analytics model long-term. We intend to use this baseline to create a Volleyball Video Analytics model that would serve as a free resource for players and teams who may not have the resources to take advantage of the for-pay product.
 
 ## Scope
 ### 1. What data science solutions are we trying to build?
-We propose a Semi-Supervised Computer Vision Model that will track the volleyball and players (See: Problem Description) from video clips provided by the user.
-If we can succeed with this we will expand our scope to include annotation of additional volleyball elements
-* Player Action
-* Referees
-  
-The goals of this solution include: tracking the ball, accurately annotating volleyball elements, and potentially dealing with occlusion happening during the play.
+We propose a Supervised Computer Vision Model that will track the volleyball (See: Problem Description) from video clips provided by the user. 
+* We plan to expand our scope to include annotation of additional volleyball elements after this project to reach our long term goal. (See: Future Work)
 
-The model will utilize supervised machine learning techniques, including Convolutional Neural Networks, Computer Vision Models (YOLOv8), and Computer Vision Libraries (OpenCV).
+The model will utilize supervised machine learning techniques, including Convolutional Neural Networks (TrackNet), Computer Vision Models (YOLOv8), and Computer Vision Libraries (OpenCV).
+
+The goals of this solution include: tracking the ball, accurately annotating volleyball elements, and potentially dealing with occlusion happening during the play.
 
 ### 2. What will we do?
 #### Data Collection and Preparation:
