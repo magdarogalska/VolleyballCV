@@ -108,24 +108,6 @@ Precision is defined as the proportion of correctly identified instances of a vo
 #### RecallTPTP+FN
 Recall is defined as the proportion of correctly identified instances of a volleyball element out of all instances of volleyball elements in the data.A high recall indicates the model has low false negative and it is able to detect the volleyball elements when it is present in the data
 
-## Plan
-
-As of 3/20 we have labeled over 2500 frames for initial training of Yolo balanced the dataset to mitigate False Positives. As of now, we are moving forward with using the model to assist us in labeling more frames. (See: Architecture; Yolo)
-
-We currently have preliminary results for our First Deliverable as of 3/19.
-* Ball Tracking (See: Architecture; OpenCV)
-
-We intend to work on minimizing the False Positives in our model and have a more refined model reflecting these changes by 3/26.
-
-Our Second Deliverable is intended to be finished by 4/17.
-* Human Action Recognition
-
-Currently, to not go beyond scope we intend to track and mark Active Players rather than all players as this would muddy the model with high levels of occlusion. Active Players are noted by interaction with the ball.
-Final Deliverable and Demo to be presented on 4/26
-
-### Future Work
-With the current progress made on our model, we are interested in if this means of labeling is the most effective for tracking both the ball and players.As a result, if time permits, we would like to potentially work on an alternative form of labeling known as segmentation to see if there is a notable use between the two.
-
 ## Architecture
 ### Data & Data Preparation
 
@@ -187,32 +169,12 @@ We will potentially, move it to the Google Cloud Platform after labeling when th
 Since the video data is currently stored in Google Drive, the Google Storage transfer service makes it easy to move our data.
 
 #### Platform
-The client will be able to access the project through a GitHub repository.
+Currently our model is to be hosted on GitHub, a proper consumer access point will be developed in the future.
 
-## Communication
-Currently, the general roles are as follows:
-* Magda: Team lead, Feature Engineering, Model Building
-* Kat: Research, Labeling, Model Building
-* Jefferson: Feature Engineering, QA, Model Building
-  
-There will be two meetings a week:
+### Future Work
+Our immediate next goal is to add additional tracking features to the model. The highest priority is the implementation of Human Action Recognition such as spiking, serving, etc. This would be our first step into truly creating Volleyball Analytics, which is our overarching long-term goal of this model. 
 
-The first meeting will be early in the week and is a collaborative meeting to address what each team member will need to do before the next meeting.
+With this aspect applied, we would then like to branch out into developing a Web or Desktop Application.
+* This will increase the ease of use for the consumer.
 
-The end-of-the-week meeting will be a check-in to see how weekly progress went and what targets were hit and missed. We will then try to see if the missed targets can be solved in a group setting before the next meeting.
-To enhance communication and assure team member participation and satisfaction we have a text chat in which members can send feedback and updates on the project at any time to address quick fixes and prioritize during the end-of-week meeting.
-
-## Risks
-### Budget
-Referencing a run of our YOLO model to label the ball without GPU, it took about 11 hours. This model ran on a T4 GPU which took a little over an hour.
-With the knowledge our model usage will grow more complex than this we have averaged a usage of 30 to 50 hours a week resulting in our budget range.
-
-### Labeling
-Computer Vision Projects generally require large amounts of data for Model Training. We propose a solution to speed up the data annotation process. (See: Yolo; Architecture.)
-### Occlusion
-This is a common problem in Computer Vision and currently has no foolproof solution. It does however have several proposed approaches to minimize the accuracy issues attached to it.
-Below is a paper proposing using the tracked ball trajectory to estimate areas where the ball will appear once the period of occlusion ends. It claims when compared to similar models it surpassed them.
-* https://ieeexplore.ieee.org/document/7797015
-
-
-
+Branching out to make the model handle more variable courts for long term which increases use of our Web Application.
